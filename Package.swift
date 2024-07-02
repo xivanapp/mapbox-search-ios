@@ -46,10 +46,9 @@ let package = Package(
             exclude: ["Info.plist", "Resources-Info.plist"]
         ),
 
-        coreSearchTarget(
+        .binaryTarget(
             name: "MapboxCoreSearch",
-            version: coreSearchVersion,
-            checksum: coreSearchVersionHash
+            path: "Sources/MapboxCoreSearch/MapboxCoreSearch.xcframework"
         ),
 
         .testTarget(
